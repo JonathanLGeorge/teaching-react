@@ -4,6 +4,7 @@ import PropsDemo from "./components/PropsDemo";
 import pic1 from "./img/servbots.JPG";
 import pic2 from "./img/servbotdrill.JPG";
 import ClassDemo from "./components/ClassDemo";
+import SearchInput from "./components/SearchInput";
 function App() {
   return (
     <div className="App">
@@ -36,6 +37,11 @@ function App() {
       <br />
       <div>
         <ClassDemo />
+      </div>
+      <br />
+      <br />
+      <div className="ui container" style={{ marginTop: "30px" }}>
+        <SearchInput />
       </div>
     </div>
   );
