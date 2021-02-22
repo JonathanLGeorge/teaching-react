@@ -1,6 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-
+import logo from "./logo.svg";
+import "./App.css";
+import PropsDemo from "./components/PropsDemo";
+import pic1 from "./img/servbots.JPG";
+import pic2 from "./img/servbotdrill.JPG";
+import ClassDemo from "./components/ClassDemo";
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,22 @@ function App() {
           Learn React
         </a>
       </header>
+      <PropsDemo
+        name="Jon"
+        date="Today at 4PM"
+        message="React props yeah!"
+        pic={pic1}
+      />
+      <PropsDemo
+        name="Jonathan"
+        date="Today at 6PM"
+        message="Easy right?"
+        pic={pic2}
+      />
+      <br />
+      <div>
+        <ClassDemo />
+      </div>
     </div>
   );
 }

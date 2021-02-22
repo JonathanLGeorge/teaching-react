@@ -1,0 +1,10 @@
+Constructor
+render
+componentDidMount
+componentDidUpdate
+componentWillUnmount
+
+(rarely used)
+shouldComponentUpdate
+getDerivedStateFromProps
+getSnapshotBeforeupdate
