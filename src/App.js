@@ -13,6 +13,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Navbar from "./components/Navbar";
 class App extends React.Component {
   state = {
     images: [],
@@ -32,6 +33,7 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
