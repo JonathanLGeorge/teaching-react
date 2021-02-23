@@ -20,3 +20,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+//NaveLink will add in a class="active" to our <a>
