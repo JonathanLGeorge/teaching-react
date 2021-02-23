@@ -10,6 +10,9 @@ import SearchInput from "./components/SearchInput";
 class App extends React.Component {
   onSearchSubmit = (entry) => {
     console.log("this is our callback returning: " + entry);
+    axios.get(
+      `https://pixabay.com/api/?key=18450117-e789e7e7bce928304931a9008&q=${entry}&image_type=photo`
+    );
   };
   render() {
     return (
