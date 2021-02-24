@@ -14,6 +14,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
+import Card from "./components/Card";
 class App extends React.Component {
   state = {
     images: [],
@@ -30,6 +31,7 @@ class App extends React.Component {
     this.setState({ images: response.data.hits });
   };
   render() {
+    //we could use a Switch tag for the routes. but what we have is fine
     return (
       <BrowserRouter>
         <div className="App">
@@ -37,21 +39,8 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/card/:user" component={Card} />
 
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <p>
-              Edit <code>src/App.js</code> and save to reload.
-            </p>
-            <a
-              className="App-link"
-              href="https://reactjs.org"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn React
-            </a>
-          </header>
           <PropsDemo
             name="Jon"
             date="Today at 4PM"
@@ -81,5 +70,4 @@ class App extends React.Component {
     );
   }
 }
-
 export default App;
