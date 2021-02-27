@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Portal from './Portal'
 const Contact = () => {
   //you can see the history object
   //console.log(props);
@@ -11,6 +12,7 @@ const Contact = () => {
 
   return (
     <div>
+      <Portal/>
       <div
         className="ui raised very padded text container segment"
         style={{ marginTop: "80px" }}
