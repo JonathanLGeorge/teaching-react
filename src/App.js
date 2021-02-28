@@ -15,6 +15,10 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
 import Card from "./components/Card";
+import TodoList from "./components/TodoList";
+
+//context
+import ThemeContextProvider from './context/ThemeContext'
 class App extends React.Component {
   state = {
     images: [],
@@ -35,12 +39,18 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <ThemeContextProvider>
           <Navbar />
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
           <Route path="/card/:user" component={Card} />
 
+          <TodoList/>
+          </ThemeContextProvider>
+          
+
+          <TodoList/>
           <PropsDemo
             name="Jon"
             date="Today at 4PM"
